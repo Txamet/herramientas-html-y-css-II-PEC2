@@ -1,0 +1,22 @@
+@use "../functions";
+
+.parrafo {
+  line-height: 1.75rem;
+  color: functions.colores("texto", "fondo-oscuro");
+  text-align: start;
+}
+
+@container (width >= 428px) {
+  .parrafo {
+    font-size: 1.25rem;
+    line-height: 2.25rem;
+  }
+}
+
+@container (width >= 968px) {
+  .parrafo {
+    margin-top: 2.5rem;
+    font-size: 1.35rem;
+    line-height: 2.5rem;
+  }
+}

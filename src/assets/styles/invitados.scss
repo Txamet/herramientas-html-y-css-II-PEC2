@@ -1,0 +1,25 @@
+
+@use "dependencies";
+@import "variables";
+
+@layer bootstrap, layouts, components, utilities;
+
+@layer bootstrap {
+  @import "bootstrap/scss/bootstrap";
+}
+
+@layer layouts {
+  @import "layouts/header";
+  @import "layouts/contenedor";
+  @import "layouts/footer";
+}
+
+@layer components {
+  @import "components/logo";
+  @import "components/tarjetas";
+}
+
+@layer utilities {
+  @import "utilities/encabezados";
+  @import "utilities/parrafos";
+}

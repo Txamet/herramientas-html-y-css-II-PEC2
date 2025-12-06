@@ -1,0 +1,93 @@
+<!doctype html>
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="En esta página tienes el formulario a rellenar para ponerte en contacto con nosotros.">
+    <link rel="stylesheet" type="text/css" href="./assets/styles/contacto.scss"><!-- do not remove this line! -->
+    <link rel="shortcut icon" href="./assets/images/favicon/huevo-frito.png" type="image/x-icon">
+    <title>Contacta con nosotros | CookCon</title>
+  </head>
+  <body class="bg-black">
+    <include src="./views/header.html"></include>
+    
+    <main class="contenedor">
+
+      <div class="contenedor-secundario">
+
+        <h1 class="encabezado__principal">Contacto</h1>
+
+        <p class="parrafo">¿Eres una empresa que quiere tener representación en CookCon? ¿Eres un amante de la cocina y estás interesado en recibir información sobre nuestros eventos? ¿Tienes sugerencias para mejorar nuestra feria?</p>
+
+        <p class="parrafo">Sea cual sea tu motivo, ponte en contacto con nosotros a través de este formulario y te responderemos lo antes posible. Todos tus datos estarán protegidos por la LOPD y no se cederán a terceros.</p>
+
+        <form class="formulario row g-3" name="contacto" method="get" action="/" data-netlify="true">
+
+              <div class="col-md-6">
+                <label for="inputNombre" class="form-label formulario__label">Nombre</label>
+                <input type="text" class="formulario__input form-control" id="inputNombre" required>
+              </div>
+  
+              <div class="col-md-6">
+                <label for="inputApellidos" class="form-label formulario__label">Apellidos</label>
+                <input type="text" class="formulario__input form-control" id="inputApellidos" required>
+              </div>
+  
+              <div class="col-12">
+                <label for="inputEmail" class="form-label formulario__label">Email</label>
+                <input type="email" class="formulario__input form-control" id="inputEmail" placeholder="nombre@email.com" required>
+              </div>
+          
+          <fieldset class="row mt-3 mb-3">
+
+            <legend class="col-form-label row-sm-2 pt-0 formulario__label">Representas a:</legend>
+
+            <div class="col-sm-10">
+
+              <div class="form-check ms-4 mb-3">
+                <input class="form-check-input" type="radio" name="radio" id="particular" value="particular" required>
+                <label class="form-check-label formulario__label" for="particular">
+                  Particular
+                </label>
+              </div>
+
+              <div class="form-check ms-4">
+                <input class="form-check-input" type="radio" name="radio" id="empresa" value="empresa" required>
+                <label class="form-check-label formulario__label" for="empresa">
+                  Empresa
+                </label>
+              </div>
+
+            </div>
+
+          </fieldset>
+
+          <div class="mb-3">
+            <label for="inputComentarios" class="form-label formulario__label">Comentarios</label>
+            <textarea class="formulario__input form-control" id="inputComentarios" rows="6" required></textarea>
+          </div>
+
+          <div class="col-12 mt-4 mb-4">
+            <input class="form-check-input me-2" type="checkbox" value="newsletter-yes" id="checkDefault">
+            <label class="form-check-label formulario__label" for="checkDefault">
+              Deseo recibir la newsletter para estar al día con futuros eventos
+            </label>
+          </div>
+
+          <div class="col-12">
+            <button type="submit" class="formulario__boton btn btn-warning hvr-grow" data-bs-toggle="popover" data-bs-content="Formulario enviado con éxito. Nos pondremos en contacto contigo lo antes posible.">Enviar</button>
+          </div>
+
+        </form>
+
+      </div>
+      
+    </main>
+
+    <include src="./views/modal-exito-formulario.html"></include>
+    <include src="./views/modal-error-formulario.html"></include>
+    <include src="./views/footer.html"></include>
+    <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
+  </body>
+</html>

@@ -1,0 +1,19 @@
+@use "sass:map";
+@use "variables";
+
+@function colores($clase, $subclase) {
+
+  $clase-validada: map.get(variables.$colores, $clase);
+
+  @if not $clase-validada {
+    @error "La clase `#{$clase}` no existe en la paleta de colores";
+  }
+
+  $color: map.get($clase-validada, $subclase);
+
+  @if not $color {
+    @error "La subclase `#{$subclase}` no existe en la paleta de colores de la clase `#{$clase}`";
+  }
+
+  @return $color;
+}

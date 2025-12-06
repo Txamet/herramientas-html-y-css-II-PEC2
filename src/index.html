@@ -1,0 +1,63 @@
+<!doctype html>
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Esta el la página de la CookCon, la feria anual sobre el mundo de la cocina. Este año la temática principal es la cocina tradicional.">
+    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
+    <link rel="shortcut icon" href="./assets/images/favicon/huevo-frito.png" type="image/x-icon">
+    <title>Inicio | CookCon</title>
+  </head>
+  <body class="bg-black">
+    <include src="./views/header.html"></include>
+    <main class="contenedor">
+
+      <div class="home">
+
+        <figure class="figure">
+          <img class="figure__imagen" src="./assets/images/home/vegetables-olla.jpg" alt="Una olla con vegetales alrededor">
+        </figure>
+
+        <div class="home__bloque">
+          <h1 class="encabezado__principal text-start">La <span class=" logo__color-principal">Co<span class="logo__color-secundario">okC</span>on</span> más tradicional</h1>
+          <p class="home__bloque-parrafo">En esta nueva edición de la CookCon ponemos el foco en la cocina tradicional, uno de los principales tesoros gastrónomicos nacionales.</p>
+        </div>
+
+        <figure class="figure">
+          <img class="figure__imagen" src="./assets/images/home/kitchen.jpg" alt="Varios cocineros en acción en una cocina profesional">
+        </figure>
+
+        <div class="home__bloque">
+          <h2 class="home__bloque-titular">Invitados destacados</h2>
+          <p class="home__bloque-parrafo">Descubre nuestros principales invitados que estarán en las ponencias y talleres.</p>
+          <a class="home__bloque-boton btn btn-warning hvr-grow" role="button" href="invitados.html">Ver Invitados</a>
+        </div>
+
+        <figure class="figure">
+          <img class="figure__imagen" src="./assets/images/home/crema-catalana-portada.jpg" alt="Una tarrina de crema catalana">
+        </figure>
+
+        <div class="home__bloque">
+          <h2 class="home__bloque-titular">Blog</h2>
+          <p class="home__bloque-parrafo">En nuestro blog encontrarás la receta para hacer Crema Catalana, un postre tradicional de Cataluña.</p>
+          <a class="home__bloque-boton btn btn-warning hvr-grow" role="button" href="blog.html">Ir al Blog</a>
+        </div>
+
+        <figure class="figure">
+          <img class="figure__imagen" src="./assets/images/home/elaborando-plato.jpg" alt="Un cocinero colocando los ingredientes en el plato">
+        </figure>
+
+        <div class="home__bloque">
+          <h2 class="home__bloque-titular">Contacto</h2>
+          <p class="home__bloque-parrafo">Contacta con nosotros para preguntarnos lo que sea, desde información como visitante a cómo formar parte de la CookCon.</p>
+          <a class="home__bloque-boton btn btn-warning hvr-grow" role="button" href="contacto.html">Contactar</a>
+        </div>
+
+      </div>
+
+    </main>
+    <include src="./views/footer.html"></include>
+    <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
+  </body>
+</html>

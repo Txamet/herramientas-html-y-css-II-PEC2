@@ -1,0 +1,32 @@
+@use "../functions";
+
+.formulario {
+
+  &__label { color: functions.colores("texto", "fondo-oscuro"); }
+
+  &__input { font-size: 1rem; }
+
+  &__boton { background-color: functions.colores("fondo", "secundario"); }
+}
+
+@container (width >= 428px) {
+
+  .formulario {
+    margin-top: 5cqb;
+    margin-bottom: 8cqb;
+    font-size: 1.25rem;
+
+    & :where(&__input, &__boton) { font-size: 1.25rem; }
+  }
+}
+
+@container (width >= 900px) {
+
+  .formulario {
+    max-width: 90cqw;
+    margin-inline: auto;
+    font-size: 1.35rem;
+
+    & :where(&__input, &__boton) { font-size: 1.35rem; }
+  }
+}

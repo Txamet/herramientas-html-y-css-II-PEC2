@@ -1,0 +1,228 @@
+@use "../functions";
+
+.home {
+
+  &__bloque {
+    max-width: 1000px;
+    margin-inline: auto;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  &__bloque-parrafo {
+    color: functions.colores("texto", "fondo-oscuro");
+  }
+
+  &__bloque-titular {
+    margin-bottom: 1rem;
+    font-size: 1.75rem;
+    color: functions.colores("texto", "fondo-oscuro-alternativo");
+    text-align: start;
+  }
+
+  &__bloque-boton { background-color: functions.colores("fondo", "secundario");} 
+}
+
+.figure {
+   
+    &__imagen {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+    }
+}
+
+@container (width >= 428px) {
+  .home {
+    margin-inline: 2rem;
+
+    &__bloque-titular {
+      margin-bottom: 1.5rem;
+      font-size: 2.25rem;
+    }
+
+    &__bloque-parrafo {
+      font-size: 1.25rem;
+      line-height: 2.25rem;
+    }
+
+    &__bloque-boton { 
+      margin-block: 2rem;
+      font-size: 1.25rem; 
+    }
+  }
+}
+
+@container (width >= 768px) {
+
+  .home {
+
+    &__bloque-titular {
+      margin-bottom: 2.5rem;
+      font-size: 2.5rem;
+    }
+
+    &__bloque-parrafo {
+        font-size: 1.35rem;
+        line-height: 2.25rem;
+      }
+
+    &__bloque-boton { font-size: 1.35rem; }
+  }
+}
+
+@container (width > 1192px) {
+  .home {
+    max-width: 1000px;
+    margin-inline: auto;
+  }
+}
+
+
+@supports (display: grid) {
+
+  .home {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+
+    &__bloque {
+      width: 100%;
+      max-width: none;
+      margin-inline: none;
+      margin-top: 0rem;
+      margin-bottom: 0rem;
+    }
+  }
+
+  .figure {
+    margin-bottom: 0rem;
+
+    &__imagen {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  }
+
+  @container (width >= 428px) {
+
+    .home {
+      gap: 3.5rem;
+      margin-inline: 2rem;
+
+      &__bloque-parrafo {
+        font-size: clamp(1.25rem, 1.5vw, 1.5rem);
+        line-height: 2.25rem;
+      }
+
+      &__bloque-boton { 
+        margin-block: 1rem;
+        font-size: clamp(1.25rem, 1.5vw, 1.5rem);
+      }
+
+    }
+  }
+
+  @container (width >= 768px) {
+    .home {
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem 1.5rem;
+
+      &__bloque-titular {
+        margin-bottom: 1.5rem;
+        font-size: clamp(2.25rem, 2.5vw, 3rem);
+      }
+      
+    }
+
+    .figure__imagen {
+      height: 100%;
+    }
+  }
+
+  @container (width > 1192px) {
+    .home {
+      max-width: none;
+      margin-inline: none;
+    }
+  }
+
+  @container (width >= 1318px) {
+    .home {
+      display: grid;
+      grid-template-rows: repeat(4, 20vw);
+      grid-template-columns: 1fr 3fr 3fr 1fr;
+      gap: 5vw 2vw;
+  
+      &__bloque {
+        
+        &:nth-child(2) {
+          position: relative;
+          grid-row: 1 / 2;
+          grid-column: 3 / 4;
+          align-self: center;
+        }
+  
+        &:nth-child(4) {
+          position: relative;
+          grid-row: 2 / 3;
+          grid-column: 2 / 3;
+          align-self: center;
+        }
+  
+        &:nth-child(6) {
+          position: relative;
+          grid-row: 3 / 4;
+          grid-column: 3 / 4;
+          align-self: center;
+        }
+  
+        &:nth-child(8) {
+          position: relative;
+          grid-row: 4 / 5;
+          grid-column: 2 / 3;
+          align-self: center;
+        }
+      }
+  
+    }
+  
+    .figure {
+      margin-bottom: 0rem;
+  
+      &__imagen {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+  
+      &:nth-child(1) {
+        position: relative;
+        grid-row: 1 / 2;
+        grid-column: 2 / 3;
+      }
+  
+      &:nth-child(3) {
+        position: relative;
+        grid-row: 2 / 3;
+        grid-column: 3 / 4;
+      }
+  
+      &:nth-child(5) {
+        position: relative;
+        grid-row: 3 / 4;
+        grid-column: 2 / 3;
+      }
+  
+      &:nth-child(7) {
+        position: relative;
+        grid-row: 4 / 5;
+        grid-column: 3 / 4;
+      }
+    }
+  }
+}

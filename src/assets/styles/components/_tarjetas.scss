@@ -1,0 +1,34 @@
+
+.tarjetas-grupo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin-block: 2rem;
+}
+
+.card {
+  max-width: 18rem;
+  border: none;
+}
+
+@container (width > 460px) {
+  
+  .card-text {
+    font-size: 1.15rem;
+    line-height: 2rem;
+  }
+}
+
+@container (width >= 1000px) {
+
+  .tarjetas-grupo {
+    margin-block: 4rem;
+  }
+
+  .card-text {
+    font-size: 1.25rem;
+    line-height: 2rem;
+  }
+}
+

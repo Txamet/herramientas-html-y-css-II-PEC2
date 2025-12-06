@@ -1,0 +1,25 @@
+@use "../functions";
+
+.contenedor {
+  min-height: 85dvh;
+  padding-block: 3rem;
+  padding-inline: 1rem;
+  container-type: inline-size;
+  border-top: 2px solid functions.colores("fondo", "secundario");
+  border-bottom: 2px solid functions.colores("fondo", "secundario");
+  
+}
+
+.contenedor-secundario {
+  max-width: 1000px;
+  margin-inline: auto;
+  container-type: inline-size;
+}
+
+
+
+@container (width >= 523px) {
+  .contenedor-secundario {
+    padding-inline: 2rem;
+  }
+}

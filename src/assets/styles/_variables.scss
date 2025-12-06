@@ -1,0 +1,65 @@
+@use "sass:color";
+
+
+// Variables para color
+
+$colores: (
+  "fondo": (
+    "primario": oklch(0 0 0),
+    "secundario": oklch(0.83 0.2 78.19)
+  ),
+
+  "texto": (
+    "fondo-claro": oklch(0 0 0),
+    "fondo-oscuro": oklch(1 0 0),
+    "fondo-oscuro-alternativo": oklch(0.83 0.2 78.19)
+  )
+);
+
+
+// Variables relacionadas con el color en la Navbar
+
+$navbar-light-color: oklch(1 0 0);
+$navbar-light-hover-color: oklch(0.83 0.2 78.19);
+$navbar-light-icon-color: oklch(1 0 0);
+$navbar-nav-link-padding-x: 1rem;
+
+
+// Variables del componente card
+
+$card-border-radius: none;
+$card-bg: oklch(0 0 0);
+$card-title-color: oklch(0.83 0.2 78.19);
+$card-color: oklch(1 0 0);
+
+
+// Variables del focus
+
+$focus-ring-color: oklch(0.83 0.2 78.19);
+
+
+// Variables de formulario
+
+$form-check-input-checked-color: oklch(0 0 0);
+$form-check-input-checked-bg-color: oklch(0.83 0.2 78.19);
+
+
+// Variables de botones
+
+$btn-font-weight: bold;
+$btn-color: oklch(0.83 0.2 78.19);
+
+
+// Variables del modal
+
+$modal-content-color: oklch(1 0 0);
+$modal-content-bg: oklch(0 0 0);
+$modal-content-border-color: oklch(0.83 0.2 78.19);
+$modal-content-border-width: 5px;
+$modal-header-border-color: none;
+
+
+// Variables del close button
+
+$btn-close-color: oklch(0.83 0.2 78.19);
+$btn-close-opacity: 1;
